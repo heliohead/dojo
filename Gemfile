@@ -13,6 +13,7 @@ gem 'sqlite3'
 gem 'devise'
 
 group :development, :test do
+  gem 'simplecov', :require => false
   gem 'pry-meta'
   gem 'web-console', '~> 2.0'
   gem 'spring'
