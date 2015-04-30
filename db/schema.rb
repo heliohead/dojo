@@ -11,7 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150428212243) do
+ActiveRecord::Schema.define(version: 20150429230702) do
+
+  create_table "dojos", force: :cascade do |t|
+    t.string   "title"
+    t.string   "description"
+    t.string   "location"
+    t.date     "date"
+    t.time     "initial_time"
+    t.integer  "chairs"
+    t.string   "backgroung_img"
+    t.integer  "user_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  add_index "dojos", ["user_id"], name: "index_dojos_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
