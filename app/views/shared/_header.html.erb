@@ -1,0 +1,20 @@
+<div class="header">
+  <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+    <a class="pure-menu-heading" href="">Coding Dojo Club</a>
+    <ul class="pure-menu-list">
+      <li class="pure-menu-item <%= cp(root_path) %>">
+        <%= link_to "Home", root_path, class: "pure-menu-link" %>
+      </li>
+      <li class="pure-menu-item <%= cp(about_path) %>">
+        <%= link_to "About", about_path, class: "pure-menu-link" %>
+      </li>
+      <li class="pure-menu-item <%= cp(new_user_session_path) %>">
+        <% if current_user %>
+        <%= link_to 'Sign Out', destroy_user_session_path, class: "pure-menu-link" %>
+        <% else %>
+        <%= link_to 'Sign In', new_user_session_path, class: "pure-menu-link" %>
+        <% end %>
+      </li>
+    </ul>
+  </div>
+</div>

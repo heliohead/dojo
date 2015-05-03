@@ -1,5 +1,5 @@
 class DojoController < ApplicationController
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :authenticate_user!, except: [:index, :about]
 
   def index
     @dojo = Dojo.all
@@ -9,5 +9,8 @@ class DojoController < ApplicationController
   end
 
   def edit
+  end
+
+  def about
   end
 end
